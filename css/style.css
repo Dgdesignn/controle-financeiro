@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size:62.25%;
+}
+
+body{
+    background-color:#fcfcfc;
+}
+
+body,
+input,
+button{
+    font:400 1.8rem/1 'Nunito', sans-serif;
+}
+
+
+
+#main{
+    width: 420px;
+    
+    margin: 3% auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.balances{
+
+    background-color:#fff;
+
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+
+    margin: 0rem 0 4rem;
+    padding:4rem;
+    box-shadow:  
+    0 4px 14px -8px rgba(1, 1, 1, 0.3),
+    0 -4px 14px -8px rgba(1, 1, 1, 0.2);
+    
+    border:thin solid #eee;
+    text-align: center;
+    line-height:1.4;
+}
+
+section#display-balance aside{
+    width:100%;
+    background-color:#fff;
+    padding:2rem;
+}
+
+#main > h3{
+    font-size:2.5rem;
+    margin-bottom: 2rem;
+}
+
+#main > img{
+    width:120px;
+}
+
+section#display-balance{
+    width:100%; 
+}
+
+section#display-balance img{
+    width:80px; 
+}
+
+#transaction-data article{
+    display: flex;
+    align-items: center;
+}
+
+#transaction-data article img{
+    width: 40px;
+    margin-left:10px
+}
+
+#transaction-data .transanction-op p{
+    font-weight:bold;
+}
+
+
+section#display-balance p{
+   font-size:1.5rem;
+   font-family: arial, sans-serif;
+   font-weight:700;
+   line-height: 2;
+}
+
+section#display-balance h2{
+    color:#00cc00;
+}
+
+
+section#display-balance div.balances .balance{
+    width:50%;
+
+}
+section#display-balance div.balances .balance-positive{
+   border-right:2px dotted #bbb;
+}
+
+section#display-balance div.balances .balance h3{
+    font-size:1.8rem;
+    
+}
+
+section#display-balance div.balances .balance p{
+    font-size:2rem;
+   
+}
+
+section#display-balance div.balances .balance-positive p{
+    color: #00cc00;
+   
+}
+section#display-balance div.balances .balance-negative p{
+    color:#ff3300;
+}
+
+
+/*transaction area style------------------*/
+#transaction-data{
+    width:100%;
+}
+
+article.balances{
+    padding:1rem;
+    width:100%;
+    margin:1rem 0;
+    position: relative;
+   
+}
+
+
+article figure{
+    position:absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    opacity:.1;
+    overflow: hidden;
+
+}
+
+/*Animation effect for all transaction box*/
+.figure-son{
+    width:100%;
+    height:100vh;
+    background-color:#00cc00;
+    transform: translateX(100%)
+}
+
+.figure-son.negative-trans{
+    background-color:#ff3300;
+}
+
+figure:hover .figure-son{
+    background-color:#00cc00;
+    cursor: pointer;
+    transform: translateX(0%)
+}
+
+figure:hover .figure-son.negative-trans{
+    background-color:#ff3300;
+}
+
+
+.transition{
+    transition:all .4s;
+}
+
+
+/*Delete button style*/
+.delete-button{
+    background-color:#ff3300;
+    border-radius: 4px;;
+    color:#fff;
+    font-weight: 800;
+    padding:0.2rem 1rem;
+
+    position:absolute;
+    left: -32px;
+    top: 7px;
+ 
+    transform:scale(0)
+}
+
+.delete-button:hover{
+    background-color:#b92804;
+}
+
+article.balances:hover .delete-button{
+
+    transform:scale(1);
+    cursor: pointer;
+}
+
+.positive{
+    border-right: 6px solid #00cc00;
+}
+
+.negative{
+    border-right: 6px solid #ff3300;
+}
+
+
+
+/*finance-input style area -----------------------------------------------------------------*/
+
+#finance-input{
+    width:100%;
+}
+
+#finance-input h3{
+    text-align:left;
+    margin:4rem 0px 3rem 0px;
+}
+
+#finance-input .input-wraper{
+    width:100%;
+}
+
+#finance-input .input-wraper span label{ 
+    font-weight: border;
+}
+
+#finance-input .input-wraper span{
+    display:block;
+    color: #777;
+}
+
+#finance-input .input-wraper input{
+    width:100%;
+    margin:1rem 0px 2rem ;
+    padding:1rem;  
+}
+
+/*button save*/
+.button-save{
+    width:100%;
+    padding:1.5rem;
+    background-color:#96e696;
+    border: none;
+    color:#fff;
+    font-weight:800;
+    border: thin solid #ddd;
+    border-radius:4px;
+}
+
+.button-save:hover{
+    background-color:#14ce14;
+    cursor: pointer;
+}
+
+
+/*empty fields style*/
+ .empty{
+     outline: none;
+    border:1px solid #ff5d35fb;
+    box-shadow:  
+    0 10px 16px -14px rgb(241, 23, 23);
+}
+
+
+
+@media all and (max-width:720px){
+    #main{
+        width:90%;
+    }
+    .delete-button{
+        left: 10px;
+        top: 10px;
+        z-index: 10;
+    }
+
+    #transaction-data article p:nth-child(2){
+        margin-left:4rem
+    }
+}

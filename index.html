@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle financeiro</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="main">
+        <img src="images/piggy.svg" alt="" srcset="">
+        <h3>Controle de despesas</h3>
+        <section id="display-balance">
+            <aside>
+               
+                <p>SALDO ACTUAL</p>
+            <h2>28.965.01 Kz</h2>
+            </aside>
+           
+                <div class="balances">
+    
+                    <article class="balance balance-positive">
+                        <img src="images/dollar.svg" alt="" srcset="">
+                        <h3>RECEITAS</h3>
+                        <p class="income">40.000.00 Kz</p>
+                    </article>
+
+                    <article class="balance balance-negative">
+                        <img src="images/dollar-1.svg" alt="" srcset="">
+                        <h3>DESPESAS</h3>
+                        <p class="expense">11.035.99 Kz</p>
+                    </article>
+                </div>
+            
+            
+        </section>
+
+        <section id="transaction-data">
+            <article class="transanction-op">
+                <P>Transações </P>
+                <img src="images/money-transfer.svg" alt="" srcset="">
+            </article>
+            <div class="all-transction">
+                
+                <!---
+                <article class="balances negative">
+                    <p class="delete-button transition">x</p>
+                    <p class="transaction-name">
+                        Ténis adidas G force
+                    </p>
+                    <p class="transaction-value">
+                        - 35.000.00 Kz
+                    </p>
+
+                    <figure >
+                        <div class="figure-son transition negative-trans"></div>
+                    </figure>
+                </article>
+                -->
+            </div>
+        </section>
+
+        <section id="finance-input">
+            <h3>Adicionar transação</h3>
+            <form action="#" id="finance-form">
+                <!--TRANSACTION NAME--->
+                <div class="input-wraper">
+                    <label for="">
+                        Nome
+                        <input type="text" name="transactionName" placeholder="Nome da transação" >
+                    </label>
+                </div>
+                <!--TRANSACTION VALUE--->
+                <div class="input-wraper">
+                    <label for="">
+                        Valor
+                        <span>(negativo-despesas, positivo-receita)</span>
+                        <input type="number" name="transactionValue" placeholder="Valor da transação">
+                    </label>
+                </div>
+                <button class="button-save transition">
+                    Adicionar
+                </button>
+            </form>
+        </section>
+    </div>
+
+    <script src="./script/index.js"></script>
+</body>
+</html>
